@@ -66,66 +66,8 @@ function updateRotation() {
     });
 }
 
-// let currentIndex = 0;
-// const carousel = document.querySelector(".carousel");
-// const images = document.querySelectorAll(".carousel img");
-// const totalImages = images.length;
-// const imagesPerSlide = 3; 
-// let autoSlide;
+function toggleMenu() {
+    const navLinks = document.querySelector(".nav-links");
+    navLinks.classList.toggle("active");
+}
 
-// Move slides manually
-// function moveSlide(direction) {
-//     const maxIndex = totalImages - imagesPerSlide;
-//     currentIndex = (currentIndex + direction + totalImages) % totalImages;
-//     updateCarousel();
-// }
-
-// Auto-slide every 3 seconds
-// function startAutoSlide() {
-//     autoSlide = setInterval(() => {
-//         moveSlide(1);
-//     }, 3000);
-// }
-
-// Stop auto-slide when hovering
-// images.forEach(image => {
-//     image.addEventListener("mouseenter", () => {
-//         clearInterval(autoSlide);
-//     });
-
-//     image.addEventListener("mouseleave", () => {
-//         startAutoSlide();
-//     });
-// });
-
-// Update the carousel position
-// function updateCarousel() {
-//     carousel.style.transform = `translateX(-${currentIndex * (100 / imagesPerSlide)}%)`;
-// }
-
-// Start auto-slide on page load
-// startAutoSlide();
-
-// const imageCon = document.querySelector(".image-container");
-// const prevEl = document.getElementById("prev");
-// const nextEl = document.getElementById("next");
-// let x=0;
-// let timer=0;
-// prevEl.addEventListener("click",()=>{
-//   x=x+45;
-//   clearTimeout(timer);
-//   updateImage();
-// });
-// nextEl.addEventListener("click",()=>{
-//   x=x-45;
-//   clearTimeout(timer);
-//   updateImage();
-// });
-// function updateImage(){
-//   imageCon.style.transform=`perspective(1000px) rotateY(${x}deg)`;
-//   timer=setTimeout(()=>{
-//       x=x-45;
-//       updateImage();
-//   },3000);
-// }
-// updateImage();
