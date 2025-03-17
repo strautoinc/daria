@@ -451,9 +451,7 @@ footer {
     }
 
     .hero {
-        background-image: url(images/IMG_0089.JPG);
-        background-size: cover;
-        background-position: center;
+      height: 60vh;
     }
 
     .about-container,
