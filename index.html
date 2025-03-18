@@ -9,19 +9,34 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
+    <img
+sizes="(max-width: 1400px) 100vw, 1400px"
+srcset="
+3r3a2274-edit-25_zg8lhd_c_scale,w_200.jpg 200w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_367.jpg 367w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_486.jpg 486w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_582.jpg 582w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_653.jpg 653w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_729.jpg 729w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_801.jpg 801w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_864.jpg 864w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_924.jpg 924w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_990.jpg 990w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_1045.jpg 1045w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_1101.jpg 1101w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_1151.jpg 1151w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_1208.jpg 1208w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_1256.jpg 1256w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_1359.jpg 1359w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_1394.jpg 1394w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_1378.jpg 1378w,
+3r3a2274-edit-25_zg8lhd_c_scale,w_1400.jpg 1400w"
+src="3r3a2274-edit-25_zg8lhd_c_scale,w_1400.jpg"
+alt="">
     <script defer src="script.js"></script>
 </head>
 <body>
 
-    <!--     <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
-                    <li><a href="#features">Features</a></li>
-                    <li><a href="#gallery">Gallery</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav> -->
 <!-- NAVIGATION BAR -->
 <nav>
     <div class="nav-container">
@@ -29,9 +44,9 @@
         <div class="burger" onclick="toggleMenu()">&#9776;</div>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
+            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#features">Features</a></li>
-            <li><a href="#gallery">Gallery</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
     </div>
@@ -75,6 +90,15 @@
         </div>
 <div class="line-break"></div>
     </section>
+<section id="campaign" class="fade-in" onclick="redirectToCampaign()">
+    <div class="campaign-container">
+        <div class="campaign-text">
+        <h1>PARIS HILTON & CHRISTIAN COWAN'S CRUELTY-FREE CANINE COUTURE</h1>
+        <p>Click to view</p>
+        </div>
+</div>
+
+</section>
 
 <section id="gallery" class="fade-in">
     <h2>GALLERY</h2>
@@ -95,6 +119,26 @@
         <!-- <button class="next" onclick="rotateManual(1)">&#10095;</button> -->
     <!-- </div> -->
 </section>
+    <section id="features" class="fade-in">
+            <h2>NOTABLE FEATURES & PUBLICATIONS</h2>
+
+            <div class="feature-item">
+                <img src="images/img (1).webp" alt="Paris Hilton x Christian Cowan">
+                <div class="feature-text">
+                    <h3>Paris Hilton x Christian Cowan</h3>
+                    <p>Featured in the Paris
+                        Hilton x Christian Cowan campaign, embodying glamour and sophistication.</p>
+                        <a href="https://www.papermag.com/christian-cowan-canine-couture-2654963667.html" target="_blank">Paper Magazine Feature</a>
+                </div>
+            </div>
+            <div class="feature-item">
+                <img src="images/IMG_9710_Original.JPEG" alt="Cayman Vows Magazine">
+                <div class="feature-text">
+                    <h3>Cayman Vows Magazine</h3>
+                    <p>Highlighted in the first edition of Cayman Vows, celebrating timeless beauty and grace.</p>
+                </div>
+            </div>
+        </section>
 
     <section id="portfolio" class="fade-in">
         <h2>PORTFOLIO</h2>
@@ -106,24 +150,6 @@
             <iframe src="https://www.youtube.com/embed/jn-qhEQarUw" frameborder="0" allowfullscreen></iframe>
         </div>
    
-    </section>
-
-    <section id="features" class="fade-in">
-        <h2>Notable Features & Publications</h2>
-        <div class="feature-item">
-            <img src="cosmopolitan_cover.jpg" alt="Cosmopolitan Cover">
-            <div class="feature-text">
-                <h3>Cosmopolitan Ukraine</h3>
-                <p>Featured on the cover of Cosmopolitan Ukraine, showcasing elegance and high fashion.</p>
-            </div>
-        </div>
-        <div class="feature-item">
-            <img src="images/IMG_9710_Original.JPEG" alt="Cayman Vows Magazine">
-            <div class="feature-text">
-                <h3>Cayman Vows Magazine</h3>
-                <p>Highlighted in the first edition of Cayman Vows, celebrating timeless beauty and grace.</p>
-            </div>
-        </div>
     </section>
 
 
@@ -153,6 +179,7 @@
         </div>
         <p>© 2025 DARIA BARDOLA. ALL RIGHTS RESERVED.</p>
     </footer>
+
 
 </body>
 </html>
