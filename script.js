@@ -71,3 +71,6 @@ function toggleMenu() {
     navLinks.classList.toggle("active");
 }
 
+function redirectToCampaign() {
+    window.location.href = "https://www.papermag.com/christian-cowan-canine-couture-2653663664.html";
+}
