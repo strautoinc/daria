@@ -18,7 +18,7 @@ nav {
     top: 0;
     width: 100%;
     background: rgba(0, 0, 0, 0.85);
-    padding: 15px 0;
+    padding: 12px 0;
     backdrop-filter: blur(10px);
     z-index: 1000;
     transition: all 0.3s;
@@ -60,32 +60,6 @@ nav {
     padding: 12px 0;
 }
 
-/* .nav-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-} */
-
-/* .logo {
-    font-size: 1.5rem;
-    color: white;
-    font-weight: bold;
-} */
-
-/* 📌 NAVIGATION LINKS */
-/* .nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1rem;
-    padding: 10px 15px;
-} */
 
 /* 📌 BURGER MENU (MOBILE) */
 .burger {
@@ -124,7 +98,7 @@ nav {
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    padding: 40px 20px;
+    margin: 40px 0;
 }
 
 .about-container img {
@@ -161,6 +135,10 @@ nav {
     justify-content: space-around;
     flex-wrap: wrap;
     margin: 40px 0;
+    padding: 20px;
+    background: #111;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
 }
 
 .feature-item img {
@@ -197,7 +175,7 @@ p {
 }
 
 section {
-    padding: 100px 20px;
+    padding: 10px 20px;
     background: #111;
     color: white;
     opacity: 0;
@@ -211,6 +189,44 @@ section {
     transform: translateY(0);
 }
 
+.campaign-container {
+    display: flex;
+    background-image: url(images/img.webp);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 40px 0;
+    padding: 200px;
+}
+
+.campaign-text {
+    text-align: center;
+    padding: 20px;
+}
+
+.campaign-text h1 {
+    padding: 20px;
+    margin: 20px 0;
+    font-size: 3rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);    
+}
+
+.campaign-text p {
+    font-size: 1.2rem;
+    opacity: 0.8;
+}
+
+.campaign-text p:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+
 /* Gallery Container */
 .carousel-container {
     display: flex;
@@ -218,7 +234,8 @@ section {
     align-items: center;
     width: 100%;
     height: 500px;
-    margin: 0 auto;
+    overflow: hidden;
+    margin: 100px 0;
     position: relative;
     perspective: 1200px;
 }
@@ -287,28 +304,6 @@ section {
 .carousel-3d:hover {
     animation-play-state: paused;
 }
-
-/* Navigation Buttons */
-button.prev, button.next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.7);
-    color: #ffcc00;
-    border: none;
-    cursor: pointer;
-    font-size: 2rem;
-    padding: 10px;
-    border-radius: 50%;
-    transition: 0.3s;
-}
-
-button.prev:hover, button.next:hover {
-    background: rgba(255, 204, 0, 0.8);
-}
-
-button.prev { left: 10px; }
-button.next { right: 10px; }
 
 
 /* Contact Form */
@@ -427,13 +422,13 @@ footer {
 
 
 /* Responsive Styles */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 850px) {
     h1 {
         font-size: 2rem;
     }
 
     p {
-        font-size: 0.6rem;
+        font-size: 0.5rem;
     }
 
     nav ul {
@@ -450,7 +445,7 @@ footer {
         width: 90%;
     }
 
-   .hero {
+    .hero {
         padding: 50% 0;
 
     }
@@ -532,7 +527,13 @@ footer {
 .carousel-3d figure:nth-child(7) { transform: rotateY(270deg) translateZ(250px); }
 .carousel-3d figure:nth-child(8) { transform: rotateY(315deg) translateZ(250px); }
 
+    /* button.prev, button.next {
+        font-size: 1.5rem;
+        padding: 5px;
+    } */
+
     
+/* 📌 MOBILE STYLES */
     .burger {
         display: block;
     }
@@ -554,3 +555,4 @@ footer {
         display: flex;
     }
 }
+
