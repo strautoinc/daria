@@ -60,7 +60,6 @@ nav {
     padding: 12px 0;
 }
 
-
 /* 📌 BURGER MENU (MOBILE) */
 .burger {
     display: none;
@@ -447,6 +446,8 @@ footer {
 
     .hero {
         padding: 50% 0;
+        background-size: cover;
+        background-position: relative;
 
     }
 
@@ -490,6 +491,19 @@ footer {
 
     .feature-text {
         width: 100%;
+    }
+
+    .campaign-container {
+        max-width: 90%;
+        padding: 10px;
+        height: 300px;
+        background-size: cover;
+    }
+
+    .campaign-text h1 {
+        font-size: 1rem;
+        font-weight: 400;
+        letter-spacing: 1px;
     }
 
     form {
@@ -555,4 +569,5 @@ footer {
         display: flex;
     }
 }
+
 
