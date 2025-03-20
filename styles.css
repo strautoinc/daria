@@ -71,7 +71,7 @@ nav {
 
 
 .hero {
-    padding: 25% 0;
+    padding: 27% 0;
     background: url(images/3r3a2274-edit-25.JPG) top center/cover no-repeat;
     background-color: #443f3f95;
     background-blend-mode: overlay;
@@ -90,6 +90,122 @@ nav {
     background: rgba(0, 0, 0, 0.5);
     padding: 50px;
     border-radius: 10px;
+}
+
+/* 📌 GUIDE SECTION */
+#guide {
+    width: 100%;
+    padding: 100px 20px;
+    background-image: url(images/IMG_2763.JPG);
+    background-color: #000000;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position:right;
+    background-attachment: fixed;
+    color: white;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    text-align: left;
+
+}
+
+.guide-container {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 10px;
+    }
+
+
+.guide-content {
+    width: 55%;
+    position: relative;
+    padding: 20px;
+    letter-spacing: 1px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.speech-bubble {
+    position: absolute;
+    top: 50px;
+    left: 550px;
+    background: rgba(255, 255, 255, 0.9);
+    color: black;
+    padding: 25px;
+    border-radius: 10px;
+    max-width: 30%;
+    text-align: center;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.speech-bubble:after {
+    content: "";
+    position: absolute;
+    bottom: -15px;
+    left: 81%;
+    width: 0;
+    height: 0;
+    border-top: 15px solid rgba(255, 255, 255, 0.9);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
+.speech-bubble p {
+    font-size: 1rem;
+    color: black;
+    font-weight: 600;
+}
+
+.guide-container h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    margin-left: 10px;
+}
+
+.guide-content p {
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.853);
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.buy-button {
+    display: inline-block;
+    background: #ffffffb0;
+    color: black;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.buy-button:hover {
+    background: #ffffff;
+}
+
+.floating-buy-button {
+    background-color: #dcdcdc5a;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 1rem;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+.floating-buy-button:hover {
+    background: #ffffff;
+    color: #000;
 }
 
 .about-container {
@@ -157,6 +273,9 @@ h1 {
 }
 
 h2 {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 2.5rem;
     font-weight: 800;
     letter-spacing: 2px;
@@ -169,6 +288,9 @@ h3 {
 }
 
 p {
+    font-family: "Thasadith", sans-serif;
+    font-weight: 400;
+    font-style: normal;
     font-size: 1.2rem;
     opacity: 0.8;
 }
@@ -187,6 +309,8 @@ section {
     opacity: 1;
     transform: translateY(0);
 }
+
+
 
 .campaign-container {
     display: flex;
@@ -575,7 +699,32 @@ footer {
     .nav-links.active {
         display: flex;
     }
+
+
+/* 📌 MOBILE RESPONSIVENESS */
+    .guide-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .guide-image {
+        width: 80%;
+    }
+
+    .guide-content {
+        width: 100%;
+    }
+
+    .floating-buy-button {
+        bottom: 80px;
+        right: 10px;
+    }
+
+     .speech-bubble {
+        top: 20px;
+        left: 10px;
+        max-width: 90%;
+    }
+
 }
-
-
 
