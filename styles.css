@@ -130,7 +130,7 @@ nav {
 .speech-bubble {
     position: absolute;
     top: 50px;
-    left: 550px;
+    left: 400px;
     background: rgba(255, 255, 255, 0.9);
     color: black;
     padding: 25px;
@@ -720,11 +720,8 @@ footer {
         right: 10px;
     }
 
-     .speech-bubble {
-        top: 20px;
-        left: 10px;
-        max-width: 90%;
+    .speech-bubble {
+        opacity: 0;
     }
 
 }
-
