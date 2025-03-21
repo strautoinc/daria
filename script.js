@@ -80,3 +80,82 @@ function rotateManual(direction) {
     angle += direction * 45;
     document.querySelector(".carousel-3d").style.transform = `rotateY(${angle}deg)`;
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+    var scrollUpBtn = document.getElementById("scrollUpBtn");
+  
+    window.onscroll = function () {
+        // Show or hide the button based on scroll position
+        if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
+            scrollUpBtn.classList.add("visible");
+        } else {
+            scrollUpBtn.classList.remove("visible");
+        }
+    };
+  
+    // Scroll to the top function
+    function scrollToTop() {
+        document.body.scrollTop = 0; // For Safari
+        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    }
+  
+    // Attach the scrollToTop function to the button click event
+    scrollUpBtn.addEventListener("click", scrollToTop);
+  });
+
+  
+const form = document.getElementById('contact-form');
+const result = document.getElementById('result');
+
+    //lottie //
+        function playAnimation() {
+            const animationPath = 'images/lottie.json';
+            const animation = lottie.loadAnimation({
+                container: result,
+                renderer: 'svg',
+                loop: false,
+                autoplay: true,
+                path: animationPath,
+            });
+        }
+
+
+        function submitForm() {
+            const formData = new FormData(form);
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+            result.innerHTML = "Processing...";
+
+            fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.style.display = "block";
+                    } else {
+                        console.log(response);
+                        result.style.display = "block";
+                    }
+                })
+                .catch((error) => {
+                    result.innerHTML = "Something went wrong!";
+                })
+                .then(function () {
+                    form.reset();
+                    setTimeout(() => {
+                        result.style.display = "none";
+                    }, 4000);
+                });
+            };
+        
+                form.addEventListener("submit", function (e) {
+                    e.preventDefault();
+                    submitForm();
+                    playAnimation();
+                    });
