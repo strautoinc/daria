@@ -257,8 +257,12 @@ nav {
 }
 
 .feature-item img {
-    width: 40%;
+    width: 30%;
     border-radius: 10px;
+}
+
+#paris-img {
+    width: 40%;
 }
 
 .feature-text {
