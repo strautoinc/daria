@@ -578,7 +578,7 @@ footer {
 
 
 /* Responsive Styles */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 450px) {
     .hero, .campaign-container{
         background-attachment: scroll;
         background-size: contain;
