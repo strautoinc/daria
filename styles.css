@@ -693,8 +693,8 @@ footer {
     }
 
     .carousel-3d figure {
-        width: 100px;
-        height: 100px;
+        width: 150px;
+        height: 150px;
     }
 
     .carousel-3d figure:nth-child(1) { transform: rotateY(0deg) translateZ(250px); }
