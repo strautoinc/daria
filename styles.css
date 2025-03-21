@@ -605,6 +605,12 @@ footer {
     
 }
 
+@media screen and (max-width: 1100px) {
+    .speech-bubble {
+        display: none;
+    }
+
+}
 
 /* Responsive Styles */
 @media screen and (max-width: 855px) {
