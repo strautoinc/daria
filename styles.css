@@ -130,7 +130,7 @@ nav {
 .speech-bubble {
     position: absolute;
     top: 50px;
-    left: 400px;
+    left: 350px;
     background: rgba(255, 255, 255, 0.9);
     color: black;
     padding: 25px;
@@ -288,7 +288,7 @@ nav {
 }
 
 .paris-img {
-    width: 40%;
+    width: 70%;
 }
 
 .feature-text {
