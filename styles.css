@@ -222,21 +222,47 @@ nav {
 }
 
 .about-text {
-    padding: 20px;
+    padding: 15px;
     width: 50%;
     text-align: left;
 }
 
+
 .about-text ul li a {
     color: #ffffffa2;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     font-weight: 300;
     transition: 0.3s;
 }
 
 .about-text ul li a:hover {
     color: #ffffff;
+    text-decoration: underline;
+}
+
+/* 📌 Bounty Models Link - Elegant & Blended */
+.bounty-link {
+    opacity: 1;
+    font-style: normal;
+    text-align: left;
+    margin-top: 15px;
+    padding-top: 5px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    display: inline-block;
+}
+
+.bounty-link a {
+    color: #ffffffa2;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease, opacity 0.3s ease;
+}
+
+.bounty-link a:hover {
+    color: #ffffff;
+    /* opacity: 1; */
+    text-decoration: underline;
 }
 
 .line-break {
@@ -295,8 +321,7 @@ p {
     font-family: "Thasadith", sans-serif;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.2rem;
-    opacity: 0.8;
+    font-size: 1.1rem;
 }
 
 section {
@@ -587,7 +612,7 @@ footer {
         background-attachment: scroll;
         background-size: contain;
         height: auto;
-        min-height: 50vh;
+        min-height: 70vh;
         min-width: 100%;
     }
 
@@ -654,15 +679,15 @@ footer {
         width: 90%;
     }
 
-       #paris-img {
-        width: 100%;
-    }
-
     .about-text, .feature-text {
         width: 100%;
     }
 
     .feature-text {
+        width: 100%;
+    }
+
+    #paris-img {
         width: 100%;
     }
 
@@ -705,7 +730,7 @@ footer {
         height: 170px;
     }
 
-    .carousel-3d figure:nth-child(1) { transform: rotateY(0deg) translateZ(250px); }
+.carousel-3d figure:nth-child(1) { transform: rotateY(0deg) translateZ(250px); }
 .carousel-3d figure:nth-child(2) { transform: rotateY(45deg) translateZ(250px); }
 .carousel-3d figure:nth-child(3) { transform: rotateY(90deg) translateZ(250px); }
 .carousel-3d figure:nth-child(4) { transform: rotateY(135deg) translateZ(250px); }
