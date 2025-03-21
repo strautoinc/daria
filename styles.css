@@ -654,6 +654,10 @@ footer {
         width: 90%;
     }
 
+       #paris-img {
+        width: 100%;
+    }
+
     .about-text, .feature-text {
         width: 100%;
     }
