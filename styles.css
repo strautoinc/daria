@@ -71,10 +71,10 @@ nav {
 
 
 .hero {
-    padding: 27% 0;
-    background: url(images/3r3a2274-edit-25.JPG) top center/cover no-repeat;
-    background-color: #443f3f95;
-    background-blend-mode: overlay;
+    padding: 15% 0;
+    background: url(images/3r3a2250-edit-24.JPG) center /cover no-repeat;
+    /* background-color: #eae3e325;
+    background-blend-mode: overlay; */
     background-attachment: fixed;
     width: 100%;
     height: auto;
