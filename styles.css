@@ -876,4 +876,8 @@ footer {
         transform: scale(1.8);
     }
 
+    footer {
+        background-color: #000;
+    }
+
 }
