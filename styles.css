@@ -876,8 +876,13 @@ footer {
         transform: scale(1.8);
     }
 
-    footer {
-        background-color: #000;
+    #contact {
+        background-image: url(images/rs=w_600\,cg_true\,m.webp);
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+        background-blend-mode: overlay;
+        background-color: #0000007c;
     }
 
 }
