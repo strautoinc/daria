@@ -639,26 +639,62 @@ footer {
 
 .gallery-nav {
     display: flex;
-    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
     }
 
 .banner {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
-    background: url(images/channels4_banner.jpg) center / cover no-repeat;
+    background: url(images/ban.jpeg) center / cover no-repeat;
     height: 300px;
     position: relative;
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     margin-bottom: 20px;
     background-blend-mode: overlay;
     background-color: #0000007c;
+    color: #fff;
+    padding: 90px;
+}
+
+
+.ban-text {
+    position: absolute;
+    font-size: 2.6rem;
+    font-weight: 800;   
+    top: 50%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+    text-align: right;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-decoration: overline 1px solid;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+}
+
+.ban  {
+    font-family: "dm serif display", sans-serif;
+    font-style: normal;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 100;
+    margin-top: 30px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 5px;
+
 }
 
 .banner:hover {
     background-blend-mode: normal;
-}
+    color: #000;
 
+}
 
 .image-grid {
     display: grid ;
@@ -669,7 +705,7 @@ footer {
 }
 
 .image-grid img {
-    opacity: 0.8;
+    opacity: 0.6;
     width: 100%;
     height: auto;
     border-radius: 5px;
@@ -677,7 +713,7 @@ footer {
 }
 
 .image-grid img:hover {
-    transform: scale(2);
+    transform: scale(1.5);
     opacity: 1;
     z-index: 100000;
 }
