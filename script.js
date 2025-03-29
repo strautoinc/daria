@@ -160,36 +160,3 @@ const result = document.getElementById('result');
                     playAnimation();
                     });
 
-
-// autoscroll //
-
-// const step = 30;  // was 10 — slightly faster scroll per frame
-// const delay = 3;  // was 8 — slightly tighter timing for smoother motion
-
-// window.addEventListener("load", () => {
-//     setTimeout(() => {
-//         const target = document.getElementById("guide");
-//         if (!target) return;
-
-//         const offset = 55;
-//         const targetY = target.getBoundingClientRect().top + window.scrollY - offset;
-//         const currentY = window.scrollY;
-
-//         const step = 30; // faster scroll
-//         const delay = 3; // tighter frame timing
-
-//         const scrollDown = () => {
-//             const distance = targetY - window.scrollY;
-//             const direction = distance > 0 ? 1 : -1;
-
-//             if (Math.abs(distance) > step) {
-//                 window.scrollBy(0, step * direction);
-//                 setTimeout(scrollDown, delay);
-//             } else {
-//                 window.scrollTo(0, targetY);
-//             }
-//         };
-
-//         scrollDown();
-//     }, 2000); // Delay before scroll starts
-// });
