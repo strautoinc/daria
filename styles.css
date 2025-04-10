@@ -801,12 +801,19 @@ footer {
 
 /* Responsive Styles */
 @media screen and (max-width: 855px) {
-    .hero, .campaign-container{
+    .hero{
         background-attachment: scroll;
         background-size: contain;
         height: auto;
         min-height: 70vh;
         min-width: 100%;
+    }
+    .campaign-container {
+        padding: 20px;
+        height: auto;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
     }
 
     p {
