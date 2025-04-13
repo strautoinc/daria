@@ -161,8 +161,3 @@ const result = document.getElementById('result');
                     });
 
             
-// Video hover play/pause
-document.querySelectorAll('.hover-video').forEach(video => {
-  video.addEventListener('mouseenter', () => video.play());
-  video.addEventListener('mouseleave', () => video.pause());
-});
