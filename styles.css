@@ -1090,22 +1090,19 @@ footer {
         background-color: #0000007c;
     }
 
+    .video-grid {
+        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+        gap: 10px;
+    }
+    .video-card {
+        width: 100%;
+        height: auto;
+        aspect-ratio: 10/12;
+        background: #000;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        transition: transform 0.3s ease;
+    }
+
 }
-  /* Responsive */
-  @media screen and (max-width: 768px) {
-    .video-wrapper iframe {
-      width: 95%;
-      height: 200px;
-    }
   
-    .video-hero {
-      height: 40vh;
-      background-size: cover;
-      background-position: center;
-    }
-  }
-  @media screen and (max-width: 768px) {
-    .hover-video {
-      width: 95%;
-    }
-  }
