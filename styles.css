@@ -466,6 +466,7 @@ section {
     background: rgba(255, 255, 255, 0.4);
     transform: scale(1.05);
 }
+
 .video-container iframe {
     width: 80%;
     height: 400px;
@@ -997,7 +998,13 @@ footer {
         padding: 5px;
     } */
 
-    
+.vimeo {
+    left: 0;
+    right: 0;
+    top: 50px;
+    width: 85%;
+    height: 100%;
+}
 /* 📌 MOBILE STYLES */
     .burger {
         display: block;
