@@ -161,3 +161,30 @@ const result = document.getElementById('result');
                     });
 
             
+
+                    const brandTrack = document.querySelector('.brand-track');
+                    let position = 0;
+                    let speed = 0.5; // you can adjust this speed
+                    let isPaused = false;
+                    
+                    function moveLogos() {
+                      if (!isPaused) {
+                        position -= speed;
+                        // Reset only after the full duplicated scrollWidth
+                        if (Math.abs(position) >= brandTrack.scrollWidth / 2) {
+                          position = 0;
+                        }
+                        brandTrack.style.transform = `translateX(${position}px)`;
+                      }
+                      requestAnimationFrame(moveLogos);
+                    }
+                    
+                    brandTrack.addEventListener('mouseenter', () => {
+                      isPaused = true;
+                    });
+                    
+                    brandTrack.addEventListener('mouseleave', () => {
+                      isPaused = false;
+                    });
+                    
+                    moveLogos();
