@@ -164,7 +164,7 @@ const result = document.getElementById('result');
 
                     const brandTrack = document.querySelector('.brand-track');
                     let position = 0;
-                    let speed = 0.2; // you can adjust this speed
+                    let speed = 3; // you can adjust this speed
                     let isPaused = false;
                     
                     function moveLogos() {
