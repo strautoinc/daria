@@ -844,6 +844,102 @@ footer {
     z-index: 100000;
 }
 
+/* 📌 Blog Page */
+.blog-hero {
+    padding: 300px 20px 50px;
+    text-align: center;
+    background: url(images/DASHA_B_18417.webp) top/cover no-repeat;
+    background-attachment: fixed;
+    background-color: #1111116c;
+    background-blend-mode: overlay;
+    color: white;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+  }
+    .nav-links a {
+        color: #ffffffa2;
+        text-decoration: none;
+        font-size: 1.5rem;
+        font-weight: 100 !important;
+        padding: 10px 15px;
+        transition: 0.3s;
+        letter-spacing: 1.2px;
+    }
+  
+  .blog-hero h1 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .blog-hero p {
+    font-family: "QUICKSAND", sans-serif;
+    font-style: normal;
+    font-weight: 100;
+    font-size: 1.2rem;
+    opacity: 0.8;
+  }
+  
+  .blog-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  
+  .blog-card {
+    background: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 0px 10px rgba(255,255,255,0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .blog-card:hover {
+    transform: scale(1.03);
+  }
+  
+  .blog-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .blog-card h2 {
+    font-size: 1.5rem;
+    margin: 15px;
+  }
+  
+  .blog-card p {
+    font-size: 1rem;
+    margin: 0 15px 15px;
+    opacity: 0.8;
+  }
+  
+  .read-more {
+    display: inline-block;
+    margin: 10px 15px 20px;
+    padding: 10px 20px;
+    background: #ffffff50;
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background 0.3s;
+  }
+  
+  .read-more:hover {
+    background: #ffffff80;
+  }
+
 @media screen and (max-width: 1350px) {
     .speech-bubble {
         left: 520px;
@@ -935,17 +1031,16 @@ footer {
 /* Responsive Styles */
 @media screen and (max-width: 855px) {
     .hero{
-        background-attachment: scroll;
+        background-attachment: fixed;
         background-size: contain;
         height: auto;
-        min-height: 70vh;
+        min-height: 60vh;
         min-width: 100%;
     }
     .campaign-container {
-        padding: 20px;
-        height: auto;
-        background-size: cover;
-        background-position: center;
+        min-height: 60vh;
+        min-width: 100%;
+        background-size: contain;
         background-attachment: fixed;
     }
 
