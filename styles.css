@@ -1044,7 +1044,7 @@ footer {
 
     .hero, .blog-hero, .video-hero{
         background-attachment: fixed;
-        background-size: cover;
+        background-size: contain;
         background-position: relative;
         height: auto;
         min-height: 60vh;
