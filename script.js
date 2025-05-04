@@ -1,193 +1,149 @@
 document.addEventListener("DOMContentLoaded", function () {
+    // SECTION ANIMATION
     const sections = document.querySelectorAll("section");
-
     function revealSections() {
-        sections.forEach((section) => {
-            if (section.getBoundingClientRect().top < window.innerHeight * 0.85) {
-                section.classList.add("visible");
-            }
-        });
+      sections.forEach((section) => {
+        if (section.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          section.classList.add("visible");
+        }
+      });
     }
-
     window.addEventListener("scroll", revealSections);
     revealSections();
-});
-
-document.addEventListener("DOMContentLoaded", function () {
-    const carousel = document.querySelector(".carousel-3d");
-    let angle = 0;
-    let autoRotate;
-    const rotationStep = 45; // Each rotation moves by 45 degrees
-
-    // Auto Rotate Function (smooth movement)
-    function startAutoRotate() {
-        autoRotate = setInterval(() => {
-            angle += rotationStep;
-            carousel.style.transform = `rotateY(${angle}deg)`;
-        }, 7000); // Slow transition every 7 seconds
-    }
-
-    // Stop Auto-Rotate when hovered
-    carousel.addEventListener("mouseenter", () => {
-        clearInterval(autoRotate);
-    });
-
-    // Resume Auto-Rotate when mouse leaves
-    carousel.addEventListener("mouseleave", () => {
-        startAutoRotate();
-    });
-
-    // Manual Rotation with Buttons
-    window.rotateManual = function (direction) {
-        clearInterval(autoRotate); // Stop auto-rotation when manually adjusted
-        angle += direction * rotationStep;
-        carousel.style.transform = `rotateY(${angle}deg)`;
-        startAutoRotate(); // Resume auto-rotation after manual adjustment
-    };
-
-    // Start Auto Rotation on Load
-    startAutoRotate();
-});
-
-function updateRotation() {
-    carousel.style.transform = `rotateY(${angle}deg)`;
-
-    // Get all figures and adjust opacity
-    const figures = document.querySelectorAll(".carousel-3d figure");
-    figures.forEach((fig, index) => {
-        let currentAngle = (index * 45 + angle) % 360; // Adjust for current position
-
-        // Dim images in the back
-        if (currentAngle >= 180 && currentAngle <= 360) {
-            fig.style.opacity = "0.3"; // More dimmed when in the back
-        } else {
-            fig.style.opacity = "1"; // Fully visible when in the front
-        }
-    });
-}
-
-function toggleMenu() {
+  
+    // TOGGLE MENU (Mobile Nav)
+    const burger = document.querySelector(".burger");
     const navLinks = document.querySelector(".nav-links");
-    navLinks.classList.toggle("active");
-    const navLink = document.querySelector(".nav-link");
-    navLink.classList.toggle("active");
-}
-
-
-function redirectToCampaign() {
-    window.location.href = "https://www.papermag.com/christian-cowan-canine-couture-2653663664.html";
-}
-
-let angle = 0;
-function rotateManual(direction) {
-    angle += direction * 45;
-    document.querySelector(".carousel-3d").style.transform = `rotateY(${angle}deg)`;
-}
-
-document.addEventListener("DOMContentLoaded", function () {
-    var scrollUpBtn = document.getElementById("scrollUpBtn");
-  
-    window.onscroll = function () {
-        // Show or hide the button based on scroll position
-        if (document.body.scrollTop > window.innerHeight || document.documentElement.scrollTop > window.innerHeight) {
-            scrollUpBtn.classList.add("visible");
-        } else {
-            scrollUpBtn.classList.remove("visible");
-        }
-    };
-  
-    // Scroll to the top function
-    function scrollToTop() {
-        document.body.scrollTop = 0; // For Safari
-        document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE, and Opera
+    if (burger && navLinks) {
+      burger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+      });
     }
   
-    // Attach the scrollToTop function to the button click event
-    scrollUpBtn.addEventListener("click", scrollToTop);
+    // CAROUSEL AUTO ROTATE
+    const carousel = document.querySelector(".carousel-3d");
+    if (carousel) {
+      let angle = 0;
+      const rotationStep = 45;
+      let autoRotate;
+  
+      function startAutoRotate() {
+        autoRotate = setInterval(() => {
+          angle += rotationStep;
+          carousel.style.transform = `rotateY(${angle}deg)`;
+        }, 7000);
+      }
+  
+      carousel.addEventListener("mouseenter", () => clearInterval(autoRotate));
+      carousel.addEventListener("mouseleave", startAutoRotate);
+      startAutoRotate();
+    }
+  
+    // SCROLL UP BUTTON
+    const scrollUpBtn = document.getElementById("scrollUpBtn");
+    if (scrollUpBtn) {
+      window.onscroll = function () {
+        if (
+          document.body.scrollTop > window.innerHeight ||
+          document.documentElement.scrollTop > window.innerHeight
+        ) {
+          scrollUpBtn.classList.add("visible");
+        } else {
+          scrollUpBtn.classList.remove("visible");
+        }
+      };
+  
+      scrollUpBtn.addEventListener("click", function () {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      });
+    }
   });
 
-  
-const form = document.getElementById('contact-form');
-const result = document.getElementById('result');
+  // ========================
+  // Contact Form Submission
+  // ========================
+  const form = document.getElementById('contact-form');
+  const result = document.getElementById('result');
 
-    //lottie //
-        function playAnimation() {
-            const animationPath = 'images/lottie.json';
-            const animation = lottie.loadAnimation({
-                container: result,
-                renderer: 'svg',
-                loop: false,
-                autoplay: true,
-                path: animationPath,
-            });
-        }
+  function playAnimation() {
+    const animationPath = 'images/lottie.json';
+    lottie.loadAnimation({
+      container: result,
+      renderer: 'svg',
+      loop: false,
+      autoplay: true,
+      path: animationPath,
+    });
+  }
+
+  function submitForm() {
+    const formData = new FormData(form);
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+    result.innerHTML = "Processing...";
+
+    fetch('https://api.web3forms.com/submit', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: json
+    })
+    .then(async (response) => {
+      await response.json();
+      result.style.display = "block";
+    })
+    .catch(() => {
+      result.innerHTML = "Something went wrong!";
+    })
+    .then(() => {
+      form.reset();
+      setTimeout(() => {
+        result.style.display = "none";
+      }, 4000);
+    });
+  }
+
+  if (form) {
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      submitForm();
+      playAnimation();
+    });
+  }
 
 
-        function submitForm() {
-            const formData = new FormData(form);
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-            result.innerHTML = "Processing...";
+  // ========================
+  // Brand Logo Scrolling
+  // ========================
+  const brandTrack = document.querySelector('.brand-track');
+  let position = 0;
+  let speed = 0.7;
+  let isPaused = false;
 
-            fetch('https://api.web3forms.com/submit', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'Accept': 'application/json'
-                    },
-                    body: json
-                })
-                .then(async (response) => {
-                    let json = await response.json();
-                    if (response.status == 200) {
-                        result.style.display = "block";
-                    } else {
-                        console.log(response);
-                        result.style.display = "block";
-                    }
-                })
-                .catch((error) => {
-                    result.innerHTML = "Something went wrong!";
-                })
-                .then(function () {
-                    form.reset();
-                    setTimeout(() => {
-                        result.style.display = "none";
-                    }, 4000);
-                });
-            };
-        
-                form.addEventListener("submit", function (e) {
-                    e.preventDefault();
-                    submitForm();
-                    playAnimation();
-                    });
+  function moveLogos() {
+    if (!isPaused && brandTrack) {
+      position -= speed;
+      if (Math.abs(position) >= brandTrack.scrollWidth / 2) {
+        position = 0;
+      }
+      brandTrack.style.transform = `translateX(${position}px)`;
+    }
+    requestAnimationFrame(moveLogos);
+  }
 
-            
+  if (brandTrack) {
+    brandTrack.addEventListener('mouseenter', () => isPaused = true);
+    brandTrack.addEventListener('mouseleave', () => isPaused = false);
+    moveLogos();
+  }
 
-                    const brandTrack = document.querySelector('.brand-track');
-                    let position = 0;
-                    let speed = 0.7; // you can adjust this speed
-                    let isPaused = false;
-                    
-                    function moveLogos() {
-                      if (!isPaused) {
-                        position -= speed;
-                        // Reset only after the full duplicated scrollWidth
-                        if (Math.abs(position) >= brandTrack.scrollWidth / 2) {
-                          position = 0;
-                        }
-                        brandTrack.style.transform = `translateX(${position}px)`;
-                      }
-                      requestAnimationFrame(moveLogos);
-                    }
-                    
-                    brandTrack.addEventListener('mouseenter', () => {
-                      isPaused = true;
-                    });
-                    
-                    brandTrack.addEventListener('mouseleave', () => {
-                      isPaused = false;
-                    });
-                    
-                    moveLogos();
+  // ========================
+  // Optional External Redirect
+  // ========================
+  window.redirectToCampaign = function () {
+    window.location.href = "https://www.papermag.com/christian-cowan-canine-couture-2653663664.html";
+  };
+

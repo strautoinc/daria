@@ -8,14 +8,6 @@
     letter-spacing: 1.2px;
 }
 
-header p {
-    font-family: "QUICKSAND", sans-serif !important;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 1rem;
-    letter-spacing: 1.2px;
-}
-
 body {
     background-color: #111;
     color: #fff;
@@ -31,66 +23,39 @@ nav {
     z-index: 1000;
     transition: all 0.3s;
 }
-
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 30px;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    font-family: "QUICKSAND", sans-serif;
-    color: #ffffffa2;
-    text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 100;
-    padding: 10px 15px;
-    transition: 0.3s;
-    letter-spacing: 1.2px;
-}
-
-nav ul li a:hover {
-    color: #ffffff;
-}
-
+    
 .nav-links {
     display: flex;
     justify-content: center;
-    align-items: center;
     gap: 30px;
+    list-style: none;
 }
-.nav-links a {
+    
+.nav-links li a {
+    font-family: "QUICKSAND", sans-serif;
     color: #ffffffa2;
     text-decoration: none;
-    font-size: 1.5rem;
-    font-weight: 100 !important;
+    font-size: 1.3rem;
+    font-weight: 100;
+    text-transform: uppercase;
     padding: 10px 15px;
     transition: 0.3s;
-    letter-spacing: 1.2px;
 }
-
-/* 📌 BURGER MENU (MOBILE) */
+    
+.nav-links li a:hover {
+    color: #ffffff;
+}
+    
 .burger {
     display: none;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
     cursor: pointer;
 }
 
-
-
 .hero {
     padding: 15% 0;
     background: url(images/3r3a2250-edit-24.JPG) center /cover no-repeat;
-    /* background-color: #eae3e325;
-    background-blend-mode: overlay; */
     background-attachment: fixed;
     width: 100%;
     height: auto;
@@ -106,7 +71,21 @@ nav ul li a:hover {
     background: rgba(0, 0, 0, 0.5);
     padding: 10px 50px;
     border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
     line-height: 1.5;
+}
+.overlay p {
+    font-family: "QUICKSAND", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+}
+
+.overlay h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
 }
 
 /* 📌 GUIDE SECTION */
@@ -227,7 +206,6 @@ nav ul li a:hover {
 }
 
 
-
 .about-container {
     display: flex;
     align-items: center;
@@ -308,14 +286,6 @@ nav ul li a:hover {
     transition: transform 0.3s ease;
     }
     
-@keyframes scrollBrands {
-    from {
-     transform: translateX(0);
-     }
-    to {
-     transform: translateX(-50%);
-    }
-    }
 
 /* 📌 Bounty Models Link - Elegant & Blended */
 .bounty-link {
@@ -408,7 +378,6 @@ section {
     opacity: 1;
     transform: translateY(0);
 }
-
 
 
 .campaign-container {
@@ -608,11 +577,6 @@ button:hover {
     background: #ffffff;
 }
 
-/* #form-status {
-    margin-top: 10px;
-    color: #ffffff;
-    font-weight: bold;
-} */
 #result {
     display: none;
     position: fixed;
@@ -673,6 +637,13 @@ button:hover {
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
 
+
+
+#scrollUpBtn.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
 #contact {
     background-image: url(images/BONE2_2f28708b-641e-4353-a667-ba540a5f5946.webp);
     background-size: cover;
@@ -681,11 +652,6 @@ button:hover {
     background-attachment: fixed;
     background-blend-mode: overlay;
     background-color: #0000007c;
-}
-
-#scrollUpBtn.visible {
-    opacity: 1;
-    visibility: visible;
 }
 
 footer {
@@ -724,9 +690,8 @@ footer {
 }
 
 .video-hero {
-    /* background: url(images/21041551_277094482785936_5265080939356094464_n.jpg) top / cover no-repeat;
-    background-attachment: fixed; */
-    height: 60vh;
+    padding: 15% ;
+    min-height: 60vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -778,12 +743,6 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
-
-.gallery-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    }
 
 .banner {
     display: flex;
@@ -861,46 +820,25 @@ footer {
 
 /* 📌 Blog Page */
 .blog-hero {
-    padding: 300px 20px 50px;
+    padding: 15% 25%;
     text-align: center;
     background: url(images/DASHA_B_18417.webp) top/cover no-repeat;
     background-attachment: fixed;
     background-color: #1111116c;
     background-blend-mode: overlay;
     color: white;
+    position: relative;
   }
 
-  .nav-links {
-    position: absolute;
-    top: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-  }
-    .nav-links a {
-        color: #ffffffa2;
-        text-decoration: none;
-        font-size: 1.5rem;
-        font-weight: 100 !important;
-        padding: 10px 15px;
-        transition: 0.3s;
-        letter-spacing: 1.2px;
+    .blog-hero h1 {
+        margin-bottom: 0;
+        padding-bottom: 0;
     }
-  
-  .blog-hero h1 {
-    font-size: 2.8rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-  }
-  
-  .blog-hero p {
-    font-family: "QUICKSAND", sans-serif;
-    font-style: normal;
-    font-weight: 100;
-    font-size: 1.2rem;
-    opacity: 0.8;
-  }
+
+    .blog-hero p {
+            margin-bottom: 10px;
+        }
+
   
   .blog-grid {
     display: grid;
@@ -955,7 +893,29 @@ footer {
     background: #ffffff80;
   }
 
-@media screen and (max-width: 1350px) {
+@media screen and (max-width: 1320px) {
+    nav ul li a {
+        font-size: 1rem;
+    }
+   
+    .about-container {
+        margin: 0;
+    }
+    
+    .about-container img {
+        width: 35%;
+        border-radius: 10px;
+    }
+    
+    .about-text {
+        width: 50%;
+        text-align: left;
+    }
+
+    .about-text p {
+        font-size: 0.8rem;
+    }
+
     .speech-bubble {
         left: 520px;
     }
@@ -986,12 +946,6 @@ footer {
         color: #000;
     }
 }
-@media screen and (max-width: 1200px) {
-    nav ul li a {
-        font-size: 1rem;
-    }
-    
-}
 
 @media screen and (max-width: 1050px) {
 
@@ -999,7 +953,7 @@ footer {
         display: block;
     }
 
-    .nav-links, .nav-link {
+    .nav-links{
         position: absolute;
         top: 60px;
         left: 0;
@@ -1012,10 +966,18 @@ footer {
         display: none; /* Hidden by default */
     }
 
-    .nav-links.active, .nav-link.active {
+    .nav-links.active {
         display: flex;
     }
     
+    .about-text {
+        width: 45%;
+        text-align: left;
+    }
+
+    .about-text p {
+        font-size: 0.8rem;
+    }
 
     .speech-bubble {
         display: none;
@@ -1051,12 +1013,36 @@ footer {
 
 /* Responsive Styles */
 @media screen and (max-width: 855px) {
-    .hero{
+    .burger {
+        display: block;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        display: none; /* Hidden by default */
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+
+    .hero, .blog-hero, .video-hero{
         background-attachment: fixed;
-        background-size: contain;
+        background-size: cover;
+        background-position: relative;
         height: auto;
         min-height: 60vh;
         min-width: 100%;
+        padding: 50% 0;
     }
     .campaign-container {
         min-height: 60vh;
@@ -1069,10 +1055,6 @@ footer {
         font-size: 0.5rem;
     }
 
-    nav ul {
-        flex-direction: column;
-        gap: 15px;
-    }
 
     .video-container iframe {
         width: 95%;
@@ -1083,15 +1065,9 @@ footer {
         width: 90%;
     }
 
-    .hero {
-        padding: 50% 0;
-        background-size: cover;
-        background-position: relative;
-
-    }
 
     h1 {
-        font-size: 2rem;
+        font-size: 1.5rem;
         font-weight:600;
         letter-spacing: 2px;
     }
@@ -1101,10 +1077,13 @@ footer {
         font-weight: 300;
         letter-spacing: 0.5px;
     }
-    
-    p {
-        font-size: 1rem;
-        opacity: 0.8;
+
+    .overlay h1 {
+        font-size: 1.5rem;
+    }
+
+    .overlay p {
+        font-size: 0.8rem;
     }
 
     .about-container,
@@ -1191,29 +1170,6 @@ footer {
     width: 85%;
     height: 100%;
 }
-/* 📌 MOBILE STYLES */
-    .burger {
-        display: block;
-    }
-
-    .nav-links, .nav-link {
-        position: absolute;
-        top: 60px;
-        left: 0;
-        width: 100%;
-        background: rgba(0, 0, 0, 0.9);
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 20px;
-        display: none; /* Hidden by default */
-    }
-
-    .nav-links.active, .nav-link.active {
-        display: flex;
-    }
-
-
 
 /* 📌 MOBILE RESPONSIVENESS */
     .guide-container {
