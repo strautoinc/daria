@@ -124,7 +124,7 @@ nav {
 }
 
 .speech-bubble {
-    position: absolute;
+    position: fixed;
     top: 50px;
     left: 750px;
     background: rgba(255, 255, 255, 0.9);
@@ -364,14 +364,14 @@ nav {
     text-decoration: underline;
 }
 
-section {
+/* section {
     padding: 10px 20px;
     background: #111;
     color: white;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease-in-out;
-}
+} */
 
 
 .fade-in.visible {
@@ -539,15 +539,16 @@ form {
 label {
     display: block;
     text-align: left;
-    margin-top: 10px;
-    font-weight: bold;
     color: #ffffff;
+    font-family: "QUICKSAND", sans-serif;
+    font-size: 1rem;
+    line-height: 0.6rem;
 }
 
 input, textarea {
     width: 100%;
     padding: 10px;
-    margin-top: 5px;
+    /* margin-top: 5px; */
     background: #333;
     border: 1px solid #444;
     border-radius: 5px;
@@ -686,6 +687,7 @@ footer {
     background-attachment: fixed;
     padding: 50px 0;
     color: white;
+    max-height: 60vh;
 
 }
 
@@ -822,7 +824,7 @@ footer {
 .blog-hero {
     padding: 15% 25%;
     text-align: center;
-    background: url(images/DASHA_B_18417.webp) top/cover no-repeat;
+    background: url(images/DASHA_B_18417.webp) center/cover no-repeat;
     background-attachment: fixed;
     background-color: #1111116c;
     background-blend-mode: overlay;
