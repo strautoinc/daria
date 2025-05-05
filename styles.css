@@ -258,7 +258,6 @@ nav {
     align-items: center;
     width: 100%;
     height: 100px;
- 
     background: #ffffff;
     overflow: hidden;
     }
@@ -295,7 +294,7 @@ nav {
 /* 📌 Bounty Models Link - Elegant & Blended */
 .bounty-link {
     opacity: 1;
-    font-style: normal;
+    font-style: normal; 
     text-align: left;
     margin-top: 15px;
     padding-top: 5px;
@@ -599,10 +598,7 @@ button:hover {
     width: 30%;
     height: auto;
 }
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
+
 
 .video-container iframe {
     width: 80%;
@@ -642,8 +638,6 @@ button:hover {
     border-radius: 5px;
     transition: opacity 0.5s ease, visibility 0.5s ease;
 }
-
-
 
 #scrollUpBtn.visible {
     opacity: 1;
@@ -1042,17 +1036,50 @@ footer {
     }
 
 
-    .hero, .blog-hero {
+    .hero {
+        background-image: url(images/3r3a2250-edit-24.JPG);
         background-attachment: fixed;
-        background-size: contain;
+        background-size: contain/no-repeat;
+        background-position: relative;
+        height: auto;
+        padding: 30% 0;
+    }
+
+    .blog-hero {
+        background-image: url(images/DASHA_B_18417.webp);
+        background-attachment: fixed;
+        background-size: contain/no-repeat;
+        background-position: relative;
+        height: auto;
+        padding: 40% 0;
+    }
+    .video-body {
+        background-attachment: fixed;
+        background-size: contain/no-repeat;
         background-position: relative;
         height: auto;
         min-width: 100%;
         padding: 50% 0;
     }
+
+    .video-hero {
+        margin: 0;
+        padding: 0;
+    }
+
+    #brands {
+        height: 40px;
+    }
+
+    .brand-track img {
+        height: 25px;
+        padding-top: 15px;
+        margin-bottom: 0;
+    }
+
     .campaign-container {
-        min-width: 100%;
-        background-size: contain;
+        /* min-width: 100%; */
+        background-size: contain/no-repeat;
         background-attachment: fixed;
         background-position: relative;
         padding: 50% 0;
@@ -1074,9 +1101,8 @@ footer {
 
 
     h1 {
-        font-size: 1.5rem;
+        font-size: 1.2rem;
         font-weight:600;
-        letter-spacing: 2px;
     }
     
     h2 {
@@ -1085,13 +1111,28 @@ footer {
         letter-spacing: 0.5px;
     }
 
+    .overlay {
+        margin: 15px 50px;
+        padding: 5px 10px;
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 5px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    }
+
     .overlay h1 {
-        font-size: 1.5rem;
+        line-height: 1.1rem;
+        font-size: 1rem;
+        margin: 0;
+        padding: 0;
     }
 
     .overlay p {
-        font-size: 0.8rem;
+        line-height: 1rem;
+        font-size: 0.5rem;
+        margin: 0;
+        padding: 0;
     }
+
 
     .about-container,
     .feature-item {
@@ -1114,13 +1155,6 @@ footer {
 
     #paris-img {
         width: 100%;
-    }
-
-    .campaign-container {
-        max-width: 90%;
-        padding: 10px;
-        height: 300px;
-        background-size: cover;
     }
 
     .campaign-text h1 {
