@@ -120,7 +120,7 @@ document.addEventListener("DOMContentLoaded", function () {
   // ========================
   const brandTrack = document.querySelector('.brand-track');
   let position = 0;
-  let speed = 0.7;
+  let speed = 0.5;
   let isPaused = false;
 
   function moveLogos() {

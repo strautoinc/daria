@@ -1037,19 +1037,17 @@ footer {
 
 
     .hero {
-        background-image: url(images/3r3a2250-edit-24.JPG);
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-size: contain/no-repeat;
-        background-position: relative;
+        background-position: center top;
         height: auto;
         padding: 30% 0;
     }
 
     .blog-hero {
-        background-image: url(images/DASHA_B_18417.webp);
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-size: contain/no-repeat;
-        background-position: relative;
+        background-position: center top;
         height: auto;
         padding: 40% 0;
     }
@@ -1080,8 +1078,8 @@ footer {
     .campaign-container {
         /* min-width: 100%; */
         background-size: contain/no-repeat;
-        background-attachment: fixed;
-        background-position: relative;
+        background-attachment: scroll;
+        background-position: center top;
         padding: 50% 0;
     }
 
