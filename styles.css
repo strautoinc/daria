@@ -607,24 +607,6 @@ button:hover {
     margin-top: 20px;
 }
 
-.image-grid {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.image-grid img {
-    width: 270px;
-    height: auto;
-    border-radius: 10px;
-    transition: transform 0.3s;
-}
-
-.image-grid img:hover {
-    transform: scale(1.5);
-}
 #scrollUpBtn {
     opacity: 0;
     visibility: hidden;
@@ -799,7 +781,7 @@ footer {
 
 .image-grid {
     display: grid ;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 20px;
     padding: 20px;
 }
