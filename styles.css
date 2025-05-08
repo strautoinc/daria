@@ -100,27 +100,23 @@ nav {
     background-attachment: fixed;
     color: white;
     display: flex;
-    align-items: flex-end;
-    justify-content: flex-start;
-    text-align: left;
-
 }
 
 .guide-container {
     display: flex;
     flex-direction: column;
-    padding: 80px 10px;
+    padding: 10px;
     }
 
 
 .guide-content {
-    width: 40%;
+    align-items: center;
+    width: 35%;
     position: relative;
     padding: 20px;
-    letter-spacing: 1px;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(37, 35, 35, 0.647);
     border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.384);
 }
 
 .speech-bubble {
@@ -159,13 +155,16 @@ nav {
     font-weight: 600;
 }
 
-.guide-container h2 {
-    font-size: 2rem;
+.guide-content h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
     margin-bottom: 10px;
     margin-left: 10px;
-}
+    text-align: center;
+    }
 
 .guide-content p {
+    text-align: left;
     font-family: "QUICKSAND", sans-serif;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.853);
     font-size: 1rem;
@@ -174,7 +173,28 @@ nav {
     color: #ffffff;
 }
 
+.guide-content ul {
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.guide-content ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: left;
+    padding: 5px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.guide-content ul li:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
 .buy-button {
+    font-family: "QUICKSAND", sans-serif;
+    text-shadow: 1px 1px 1px rgba(255, 255, 255, 0.799);
     display: inline-block;
     background: #ffffffb0;
     color: black;
@@ -182,7 +202,6 @@ nav {
     border-radius: 5px;
     font-size: 1.2rem;
     text-decoration: none;
-    font-weight: bold;
     transition: background 0.3s;
 }
 
@@ -317,7 +336,7 @@ nav {
 }
 
 .line-break {
-    border-bottom: 15px solid #ffffffc7;
+    border-bottom: 5px solid #ffffffc7;
     width: 100%;
 }
 
@@ -368,14 +387,14 @@ nav {
     text-decoration: underline;
 }
 
-/* section {
-    padding: 10px 20px;
+section {
+    padding: 20px;
     background: #111;
     color: white;
     opacity: 0;
     transform: translateY(20px);
     transition: all 0.8s ease-in-out;
-} */
+}
 
 
 .fade-in.visible {
@@ -430,11 +449,11 @@ nav {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 700px;
-    overflow: hidden;
-    margin: 100px 0;
+    height:auto;
+    min-height: 500px;
+    margin: 10px 0;
     position: relative;
-    perspective: 1200px;
+    perspective: 1300px;
 }
 
 /* 3D Rotating Carousel */
@@ -471,6 +490,7 @@ nav {
 
 
 
+
 /* Slower & Smoother Auto-Rotation */
 @keyframes rotate {
     from { transform: rotateY(0deg); }
@@ -479,7 +499,7 @@ nav {
 
 /* Ensure images fit properly */
 .carousel-3d figure img {
-    width: 100%;
+    width: 75%;
     height: auto;
     border-radius: 10px;
     transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
@@ -504,7 +524,8 @@ nav {
 
 .gallery-button-container {
     text-align: center;
-    margin-top: 20px;
+    margin: 20px;
+    padding: 20px;
 }
 
 .gallery-button {
@@ -666,14 +687,14 @@ footer {
 .video-body {
     background: url(images/21041551_277094482785936_5265080939356094464_n.jpg) top / cover no-repeat;
     background-attachment: fixed;
-    padding: 50px 0;
+    padding: 0;
     color: white;
     max-height: 60vh;
 
 }
 
 .video-hero {
-    padding: 15% ;
+    padding: 5px 0;
     min-height: 60vh;
     display: flex;
     align-items: center;
@@ -682,7 +703,7 @@ footer {
   }
   
   .video-gallery {
-    padding: 60px 20px;
+    padding: 20px 5px;
     background: #1111119e;
     color: white;
     text-align: center;
@@ -690,18 +711,15 @@ footer {
   
   .video-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 30px;
-    max-width: 1200px;
-    margin: auto;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 10px;
   }
   
   .video-card {
-    overflow: hidden; 
+    /* overflow: hidden;  */
     aspect-ratio: 10/8;
-    background: #000;
     border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.407);
     transition: transform 0.3s ease;
   }
   
@@ -804,7 +822,7 @@ footer {
 .blog-hero {
     padding: 15% 25%;
     text-align: center;
-    background: url(images/DASHA_B_18417.webp) center/cover no-repeat;
+    background: url(images/DASHA_B_18085.webp) top/cover no-repeat;
     background-attachment: fixed;
     background-color: #1111116c;
     background-blend-mode: overlay;
@@ -876,10 +894,24 @@ footer {
   }
 
 @media screen and (max-width: 1320px) {
-    nav ul li a {
+    .nav-links li a {
         font-size: 1rem;
     }
-   
+
+    .floating-buy-button {
+        font-size: 0.8rem;
+        padding: 8px;
+    }
+
+    .overlay h1 {
+        font-size: 1.3rem;
+    }
+    .overlay p {
+        font-size: 0.8rem;
+    }
+
+  
+
     .about-container {
         margin: 0;
     }
@@ -961,6 +993,10 @@ footer {
         font-size: 0.8rem;
     }
 
+    .guide-content {
+        width: 50%;
+    }
+
     .speech-bubble {
         display: none;
     }
@@ -1026,24 +1062,31 @@ footer {
     }
 
     .blog-hero {
-        background-attachment: scroll;
+        background-attachment: fixed;
         background-size: contain/no-repeat;
         background-position: center top;
         height: auto;
-        padding: 40% 0;
+        padding: 15% 0;
     }
     .video-body {
         background-attachment: fixed;
         background-size: contain/no-repeat;
-        background-position: relative;
-        height: auto;
         min-width: 100%;
-        padding: 50% 0;
+        padding: 0;
     }
 
     .video-hero {
         margin: 0;
         padding: 0;
+    }
+    .video-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 5px;
+    }
+    .video-card {
+
+        aspect-ratio: 10/12;
+     
     }
 
     #brands {
@@ -1192,17 +1235,47 @@ footer {
 }
 
 /* 📌 MOBILE RESPONSIVENESS */
-    .guide-container {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .guide-image {
-        width: 80%;
-    }
 
     .guide-content {
         width: 100%;
+        margin: 0 auto;
+        padding: 20px;
+        background: rgba(37, 35, 35, 0.647);
+        border-radius: 10px;
+        box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.384);
+    }
+
+    .guide-content h1 {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+
+    .guide-content p {
+        font-size: 0.8rem;    
+    }
+    .guide-content ul {
+        padding: 0 10px;
+        margin: 0 10px;
+    }
+
+    .guide-content ul li {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+        text-align: left;
+        padding: 5px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 5px;
+        transition: background 0.3s;
+    }
+
+    .guide-content ul li:hover {
+        background: rgba(255, 255, 255, 0.4);
+    }
+
+    .buy-button a {
+        font-size: 0.8rem;
+        padding: 10px 15px;
     }
 
     .floating-buy-button {
@@ -1253,19 +1326,8 @@ footer {
         background-color: #0000007c;
     }
 
-    .video-grid {
-        grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-        gap: 10px;
-    }
-    .video-card {
-        width: 100%;
-        height: auto;
-        aspect-ratio: 10/12;
-        background: #000;
-        border-radius: 10px;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-        transition: transform 0.3s ease;
-    }
+
+
 
 }
 
