@@ -799,9 +799,9 @@ footer {
 
 .image-grid {
     display: grid ;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(9, 1fr);
     gap: 20px;
-    padding: 20px;
+    padding: 50px;
 }
 
 .image-grid img {
@@ -813,7 +813,7 @@ footer {
 }
 
 .image-grid img:hover {
-    transform: scale(1.5);
+    transform: scale(2);
     opacity: 1;
     z-index: 100000;
 }
