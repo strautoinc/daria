@@ -1062,7 +1062,7 @@ footer {
     }
 
     .blog-hero {
-        background-attachment: fixed;
+        background-attachment: scroll;
         background-size: contain/no-repeat;
         background-position: center top;
         height: auto;
