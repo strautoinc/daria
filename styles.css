@@ -336,7 +336,7 @@ nav {
 }
 
 .line-break {
-    border-bottom: 5px solid #ffffffc7;
+    border-bottom: 3px solid #ffffffc7;
     width: 100%;
 }
 
@@ -403,38 +403,62 @@ section {
 }
 
 
-.campaign-container {
+#campaign {
     display: flex;
-    background-image: url(images/img.webp);
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
+    background: url(images/img.webp) top center / cover no-repeat;
+    background-attachment: fixed; 
     align-items: center;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin: 40px 0;
-    padding: 200px;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    background-blend-mode: overlay;
+    background-color: #00000076;
+    padding: 200px 0;
+    height: auto;
+}
+
+
+#campaign:hover {
+    background-blend-mode: normal;
+    /* color: #000; */
+    transition: background-blend-mode 0.6s, color 0.8s;
 }
 
 .campaign-text {
+    background: rgba(51, 49, 49, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
     padding: 20px;
 }
 
 .campaign-text h1 {
-    padding: 20px;
+    padding: 15px;
     margin: 20px 0;
-    font-size: 3rem;
     font-weight: 800;
     letter-spacing: 2px;
-    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);    
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);  
+    opacity: 0.9;  
 }
 
 .campaign-text p {
     font-family: "QUICKSAND", sans-serif;
-    font-size: 1.2rem;
-    opacity: 0.8;
+    font-size: 1.1rem;
+    font-weight: 100;
+    opacity: 0.3;
 }
+
+
 
 .campaign-text p:hover {
     opacity: 1;
@@ -444,6 +468,17 @@ section {
 
 
 /* Gallery Container */
+
+#gallery h1{
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);  
+    margin: 20px; 
+    padding: 20px;   
+}
+
+
 .carousel-container {
     display: flex;
     justify-content: center;
@@ -454,6 +489,7 @@ section {
     margin: 10px 0;
     position: relative;
     perspective: 1300px;
+    
 }
 
 /* 3D Rotating Carousel */
