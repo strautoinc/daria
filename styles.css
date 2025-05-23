@@ -203,10 +203,26 @@ nav {
     font-size: 1.2rem;
     text-decoration: none;
     transition: background 0.3s;
+    margin-left: -60px;
+    margin-bottom: 20px;
 }
 
 .buy-button:hover {
     background: #ffffff;
+}
+
+.about-link {
+    color: #ffffffa2;
+    text-decoration: none;
+    font-family: "QUICKSAND", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 100;
+    transition: 0.3s;
+}
+
+.about-link:hover {
+    color: #ffffff;
+    text-decoration: underline;
 }
 
 .floating-buy-button {
@@ -854,6 +870,130 @@ footer {
     z-index: 100000;
 }
 
+
+/* 📌 ABOUT PAGE */
+#me-section {
+    background: none;
+}
+.me-body {
+
+    padding: 0;
+    color: white;
+    min-height: 70vh;
+}
+
+#me-section {
+        background: url(images/new/IMG_9733.jpeg) center / contain no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-color: #0000007c;
+    padding: 20px 0;
+    color: white;
+    text-align: center;
+    position: relative;
+}
+
+.me-hero {
+    background: url(images/DDD.png) bottom / cover no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-color: #514a4a63;
+    color: white;
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.me-content {
+    padding: 70px;
+    margin: 20px auto;
+
+}
+
+
+.me-content h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+.me-content p {
+    font-family: "QUICKSAND", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.story-block {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 40px 0;
+    gap: 20px;
+    text-align: left;
+}
+
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+
+.story-text {
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+    width: 50%;
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex: 1 1 50%;
+}
+
+.story-text h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+    margin-bottom: 10px;
+}
+.story-text p {
+    font-family: "QUICKSAND", sans-serif;
+    font-size: 1rem;
+    font-weight: 100;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+strong {
+    font-family: "QUICKSAND", sans-serif;
+    font-weight: 800;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+}
+
+.story-img {
+    flex: 1 1 40%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.story-img img {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
 /* 📌 Blog Page */
 .blog-hero {
     padding: 15% 25%;
@@ -996,6 +1136,8 @@ footer {
         color: #000;
     }
 }
+
+
 
 @media screen and (max-width: 1050px) {
 
