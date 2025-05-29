@@ -358,7 +358,7 @@ nav {
 
 .feature-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(330px, 1fr));
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     width: 90%;
     max-width: 1200px;
@@ -403,6 +403,7 @@ nav {
     text-decoration: underline;
 }
 
+
 section {
     padding: 20px;
     background: #111;
@@ -436,7 +437,6 @@ section {
 
 #campaign:hover {
     background-blend-mode: normal;
-    /* color: #000; */
     transition: background-blend-mode 0.6s, color 0.8s;
 }
 
@@ -625,7 +625,6 @@ label {
 input, textarea {
     width: 100%;
     padding: 10px;
-    /* margin-top: 5px; */
     background: #333;
     border: 1px solid #444;
     border-radius: 5px;
