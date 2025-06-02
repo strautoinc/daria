@@ -872,16 +872,6 @@ footer {
 
 /* 📌 ABOUT PAGE */
 #me-section {
-    background: none;
-}
-.me-body {
-
-    padding: 0;
-    color: white;
-    min-height: 70vh;
-}
-
-#me-section {
     background: url(images/new/IMG_9733.jpeg) center / contain no-repeat;
     background-attachment: fixed;
     background-blend-mode: overlay;
@@ -1557,7 +1547,7 @@ strong {
 
 }
 
-@media screen and (max-width: 450px) {
+@media screen and (max-width: 485px) {
     .image-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
@@ -1571,6 +1561,17 @@ strong {
     .image-grid img:hover {
         transform: scale(1.8);
     }
+
+    #me-section {
+    background: url(images/new/IMG_9733.jpeg) center / cover repeat;
+    background-attachment: fixed;
+    max-height: 300vh;
+}
+
+.me-hero {
+    background: url(images/must.jpg) center / contain no-repeat;
+    background-attachment: fixed;
+}
 
 .me-content {
         padding: 30px;
