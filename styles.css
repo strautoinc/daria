@@ -878,7 +878,6 @@ footer {
     background-color: #0000007c;
     padding: 20px 0;
     color: white;
-    text-align: center;
     position: relative;
 }
 
@@ -898,12 +897,14 @@ footer {
 .me-content {
     padding: 70px;
     margin: 20px auto;
+    text-align: left;
 
 }
 
 
 .me-content h1 {
     font-size: 2rem;
+    text-align: center;
     font-weight: 800;
     letter-spacing: 2px;
     text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -943,7 +944,7 @@ footer {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    text-align: center;
+    text-align: left;
     flex: 1 1 50%;
 }
 
@@ -1124,6 +1125,34 @@ strong {
         background-blend-mode: normal;
         color: #000;
     }
+    .story-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 15px;
+}
+
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.story-text {
+    flex: 1 1 30%;
+    padding: 15px;
+    margin: 10px;
+}
+
+.story-img {
+    flex: 2; 
+    padding: 0;
+
+}
+    .story-img img {
+        max-width: 200px;
+        width: 100%;
+       
+    }
 }
 
 
@@ -1192,6 +1221,39 @@ strong {
     .banner:hover {
         background-blend-mode: normal;
         color: #000;
+    }
+    .story-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 5px;
+}
+
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.story-text {
+    flex: 1 1 30%;
+    padding: 15px;
+    margin: 0;
+}
+
+.story-text p {
+    font-size: 0.8rem;
+}
+
+.story-img {
+    flex: 2; 
+    margin: 0;
+    padding: 0;
+
+}
+    .story-img img {
+        max-width: 200px;
+        width: 100%;
+       
     }
 
 }
@@ -1492,14 +1554,51 @@ strong {
         background-blend-mode: overlay;
         background-color: #0000007c;
     }
+        #me-section {
+    background: url(images/new/IMG_9733.jpeg) center / cover repeat;
+    background-attachment: fixed;
+    background-blend-mode: overlay;
+    background-color: #161414db;
+    color: white;
+}
 
-    .me-hero {
-        background-attachment: scroll;
-        background-size: contain/no-repeat;
-        background-position: center top;
-        height: auto;
-        padding: 15% 0;
+  .me-hero {
+    background: url(images/IMG_7168.jpeg) center / cover no-repeat;
+    background-attachment: fixed;
+  
+}
+.story-block {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 5px;
+}
 
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.story-text {
+    flex: 1 1 30%;
+    padding: 15px;
+    margin: 0;
+}
+
+.story-text p {
+    font-size: 0.6rem;
+}
+
+.story-img {
+    flex: 2; 
+    margin: 0;
+    padding: 0;
+
+}
+    .story-img img {
+        max-width: 200px;
+        width: 100%;
+       
     }
 }
 
@@ -1546,31 +1645,55 @@ strong {
     }
 
     #me-section {
-    background: url(images/new/IMG_9733.jpeg) center / CONTAIN repeat;
+    background: url(images/new/IMG_9733.jpeg) center / cover repeat;
     background-attachment: fixed;
-      background-blend-mode: overlay;
-    background-color: #161414a6;
+    background-blend-mode: overlay;
+    background-color: #161414d9;
     color: white;
 }
 
 .me-hero {
     background: url(images/must.jpg) center / contain no-repeat;
-    background-attachment: fixed;
+    background-attachment: scroll;
   
 }
+
+.me-content p{
+    font-size: 0.6rem;
+}
+
 .story-block {
-    margin: -45px 0;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0;
+    gap: 0;
+    padding: 0;
+}
+
+.story-block.reverse {
+    flex-direction: row-reverse;
+}
+
+
+.story-text {
+    flex: 1 40%;
+    padding: 5px;
+    margin: 0;
+}
+
+.story-text p {
+    font-size: 0.6rem;
 }
 
 .story-img {
-    display: none;
-}
-
-.story-text {
-    width: 100%;
-    max-width: 100%;
-    padding: 20px;
-    text-align: center;
+    flex:  1 10%; 
+    margin: 0;
+    padding: 0;
 
 }
+    .story-img img {
+        max-width: 150px;
+        width: 100%;
+       
+    }
 }
