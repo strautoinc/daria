@@ -300,6 +300,11 @@ nav {
     transform: scale(1.05);
     transition: transform 0.3s;
     }
+
+#brands:active {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+    }    
     
 .brand-marquee {
     overflow: hidden;
@@ -324,6 +329,11 @@ nav {
     transform: scale(1.2);
     transition: transform 0.3s ease;
     }
+
+.brand-track img:active {
+    transform: scale(1.2);
+    transition: transform 0.3s ease;
+    }    
     
 
 /* 📌 Bounty Models Link - Elegant & Blended */
@@ -347,6 +357,10 @@ nav {
 }
 
 .bounty-link a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+.bounty-link a:active {
     color: #ffffff;
     text-decoration: underline;
 }
@@ -391,6 +405,11 @@ nav {
   .feature-item:hover {
     transform: scale(1.2);
   }
+  
+  .feature-item:active {
+    transform: scale(1.2);
+  }
+
 .feature-item a {
     color: #ffffffa2;
     text-decoration: none;
@@ -399,6 +418,11 @@ nav {
     transition: 0.3s;
 }
 .feature-item a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+.feature-item a:active {
     color: #ffffff;
     text-decoration: underline;
 }
@@ -440,6 +464,11 @@ section {
     transition: background-blend-mode 0.6s, color 0.8s;
 }
 
+#campaign:active {
+    background-blend-mode: normal;
+    transition: background-blend-mode 0.6s, color 0.8s;
+}
+
 .campaign-text {
     background: rgba(51, 49, 49, 0.5);
     padding: 20px;
@@ -477,6 +506,12 @@ section {
 
 
 .campaign-text p:hover {
+    opacity: 1;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.campaign-text p:active {
     opacity: 1;
     cursor: pointer;
     text-decoration: underline;
@@ -564,15 +599,29 @@ section {
     z-index: 2;
 }
 
+/* .carousel-3d figure:active img {
+    transform: scale(1.5);
+    opacity: 1;
+    z-index: 2;
+} */
+
 /* Dims the other images */
 .carousel-3d figure img:not(:hover) {
     opacity: 0.6;
 }
 
+/* .carousel-3d figure img:not(:active) {
+    opacity: 0.6;
+} */
+
 /* Pause rotation when hovering */
 .carousel-3d:hover {
     animation-play-state: paused;
 }
+
+/* .carousel-3d:active {
+    animation-play-state: paused;
+} */
 
 .gallery-button-container {
     text-align: center;
@@ -592,6 +641,11 @@ section {
 }
 
 .gallery-button:hover {
+    background: rgba(255, 255, 255, 0.4);
+    transform: scale(1.05);
+}
+
+.gallery-button:active {
     background: rgba(255, 255, 255, 0.4);
     transform: scale(1.05);
 }
@@ -733,6 +787,10 @@ footer {
     transform: scale(1.2);
     
 }
+.social-icons a:active {
+    color: #ffffff;
+    transform: scale(1.2);
+}
 
 /* VIDEO GALLERY PAGE */
 .video-body {
@@ -777,6 +835,10 @@ footer {
   .video-card:hover {
     transform: scale(1.03);
   }
+
+    .video-card:active {
+        transform: scale(1.03);
+    }
   
   .video-thumb {
     width: 100%;
@@ -864,6 +926,12 @@ footer {
 }
 
 .image-grid img:hover {
+    transform: scale(2);
+    opacity: 1;
+    z-index: 100000;
+}
+
+.image-grid img:active {
     transform: scale(2);
     opacity: 1;
     z-index: 100000;
@@ -1640,9 +1708,10 @@ strong {
         transition: transform 0.6s ease;
     }
  
-    .image-grid img:hover {
+    .image-grid img:active {
         transform: scale(1.8);
     }
+    
 
     #me-section {
     background: url(images/new/IMG_9733.jpeg) center / cover repeat;
